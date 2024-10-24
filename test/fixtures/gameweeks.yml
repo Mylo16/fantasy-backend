@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  average_score: 1
+  highest_score: 1
+  top_scorer: MyString
+  most_captained: MyString
+  start_date: 2024-10-24 13:07:55
+  end_date: 2024-10-24 13:07:55
+
+two:
+  name: MyString
+  average_score: 1
+  highest_score: 1
+  top_scorer: MyString
+  most_captained: MyString
+  start_date: 2024-10-24 13:07:55
+  end_date: 2024-10-24 13:07:55

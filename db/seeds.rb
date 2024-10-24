@@ -7,3 +7,4 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Position.create([{ name: 'Forward', short_name: 'FWD' }, { name: 'Midfielder', short_name: 'MID' }, { name: 'Defender', short_name: 'DEF' }, { name: 'Goalkeeper', short_name: 'GK' }])

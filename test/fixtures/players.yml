@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  team: one
+  position: one
+  total_points: 1
+  status: MyString
+  value: 9.99
+  match_stats: 
+
+two:
+  first_name: MyString
+  last_name: MyString
+  team: two
+  position: two
+  total_points: 1
+  status: MyString
+  value: 9.99
+  match_stats: 

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event: one
+  home_team: one
+  away_team: one
+  date: 2024-10-24 15:24:28
+  stats: 
+  completed: false
+
+two:
+  event: two
+  home_team: two
+  away_team: two
+  date: 2024-10-24 15:24:28
+  stats: 
+  completed: false

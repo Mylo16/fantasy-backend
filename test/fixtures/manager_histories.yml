@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manager: one
+  event: one
+  points_scored: 1
+  chips_used: MyString
+  previous_rank: 1
+
+two:
+  manager: two
+  event: two
+  points_scored: 1
+  chips_used: MyString
+  previous_rank: 1
