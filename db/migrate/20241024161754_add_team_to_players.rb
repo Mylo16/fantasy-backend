@@ -10,6 +10,7 @@ class AddTeamToPlayers < ActiveRecord::Migration[7.2]
     add_reference :manager_histories, :manager, null: false, foreign_key: true
     add_reference :my_teams, :manager, null: false, foreign_key: true
     add_reference :leagues, :manager, null: false, foreign_key: { to_table: :managers }
+    add_reference :stats, :fixture, null: false, foreign_key: true
 
   end
 end

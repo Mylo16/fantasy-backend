@@ -1,20 +1,19 @@
 class Api::V1::PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :update, :destroy]
-
-  # GET /players
+  before_action :require_login, only: [:create, :update, :destroy]
   def index
-    @players = Player.all
+    @team = Team.find(params[:team_id])
+    @players = @team.players
     render json: @players
   end
 
-  # GET /players/:id
   def show
-    render json: @player.as_json(include: :position)
+    @player = Player.find(params[:id])
+    render json: @player
   end
 
-  # POST /players
   def create
-    @player = Player.new(player_params)
+    @team = Team.find(params[:team_id])
+    @player = @team.players.build(player_params)
     if @player.save
       render json: @player, status: :created
     else
@@ -22,8 +21,8 @@ class Api::V1::PlayersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /players/:id
   def update
+    @player = Player.find(params[:id])
     if @player.update(player_params)
       render json: @player
     else
@@ -31,18 +30,15 @@ class Api::V1::PlayersController < ApplicationController
     end
   end
 
-  # DELETE /players/:id
   def destroy
+    @player = Player.find(params[:id])
     @player.destroy
+    head :no_content
   end
 
   private
 
-  def set_player
-    @player = Player.find(params[:id])
-  end
-
   def player_params
-    params.require(:player).permit(:first_name, :last_name, :team_id, :position_id, :total_points, :status, :value, match_stats: {})
+    params.require(:player).permit(:first_name, :last_name, :position_id, :team_id, :total_points, :status, :value, :match_stats)
   end
 end

@@ -1,0 +1,4 @@
+fetch_live_data:
+  cron: "*/10 * * * *"  # This runs every 10 minutes
+  class: "FetchLiveDataJob"
+  queue: default

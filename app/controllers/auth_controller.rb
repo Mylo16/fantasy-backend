@@ -13,8 +13,8 @@ class AuthController < ApplicationController
   end
 
   def auto_login
-    if session_user
-      render json: session_user
+    if session_manager
+      render json: session_manager
     else
       render json: { errors: 'No User Logged In' }
     end

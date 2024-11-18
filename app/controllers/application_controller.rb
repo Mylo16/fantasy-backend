@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
     end
   end
 
-  def session_user
+  def session_manager
     decoded_hash = decoded_token
     return unless decoded_hash # Return early if decoded_hash is nil
 
@@ -29,7 +29,7 @@ class ApplicationController < ActionController::API
   end
 
   def logged_in?
-    !!session_user
+    !!session_manager
   end
 
   def require_login

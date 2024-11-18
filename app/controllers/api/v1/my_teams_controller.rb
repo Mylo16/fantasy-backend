@@ -1,6 +1,11 @@
 class Api::V1::MyTeamsController < ApplicationController
   before_action :set_my_team, only: [:add_player, :remove_player, :transfer_player]
 
+  def show
+    @my_team = MyTeam.find(params[:id])
+    render json: @my_team
+  end
+  
   # Add a player to the fantasy team
   def add_player
     player = Player.find(params[:player_id])

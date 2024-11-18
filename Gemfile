@@ -42,4 +42,10 @@ end
 
 gem 'jwt'
 
+gem 'active_model_serializers'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
+gem 'redis'
+gem 'httparty'
+
 

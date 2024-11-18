@@ -5,6 +5,10 @@ class CreateTeams < ActiveRecord::Migration[7.2]
       t.string :short_name
       t.integer :strength
       t.string :code
+      t.string :wins
+      t.string :losses
+      t.string :draws
+      t.string :points
 
       t.timestamps
     end
